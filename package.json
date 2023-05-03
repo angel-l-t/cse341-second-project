@@ -1,0 +1,33 @@
+{
+  "name": "second-project",
+  "version": "1.0.0",
+  "description": "videogames api",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js",
+    "lint": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angel-l-t/cse341-second-project.git"
+  },
+  "author": "Angel Lugo Tehuitzil",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/angel-l-t/cse341-second-project/issues"
+  },
+  "homepage": "https://github.com/angel-l-t/cse341-second-project#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongodb": "^5.3.0",
+    "swagger-ui-express": "^4.6.2"
+  },
+  "devDependencies": {
+    "eslint": "^8.39.0",
+    "nodemon": "^2.0.22",
+    "swagger-autogen": "^2.23.1"
+  }
+}
