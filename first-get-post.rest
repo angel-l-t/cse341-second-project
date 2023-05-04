@@ -1,0 +1,16 @@
+GET http://localhost:3000/games HTTP/1.1
+
+###
+
+POST http://localhost:3000/games HTTP/1.1
+content-type: application/json
+
+{
+        "name" : "Dummy Game Entry",
+        "developer" : "Angel L T",
+        "genres" : "Action",
+        "languages" : "Spanish",
+        "gameModes" : "Single Player",
+        "platforms" : "Windows",
+        "launchDate" : "May 3, 2023"
+}
