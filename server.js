@@ -5,7 +5,6 @@ const cors = require("cors");
 // Modules in my project
 const mongodb = require("./db/connect");
 const routes = require("./routes");
-const { send } = require("process");
 
 // Creating express app
 const app = express();
@@ -19,6 +18,14 @@ app
   })
   .use(cors())
   .use("/", routes);
+
+// Catching exceptions
+process.on("uncaughtException", (err, origin) => {
+  console.log(
+    process.stderr.fd,
+    `Caught exception: ${err}\n` + `Exception origin: ${origin}`
+  );
+});
 
 mongodb.initDb((err, mongodb) => {
   if (err) {
