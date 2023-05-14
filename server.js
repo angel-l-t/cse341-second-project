@@ -80,6 +80,9 @@ process.on("uncaughtException", (err, origin) => {
   );
 });
 
+// Code to see node warnings on console
+// process.on('warning', e => console.warn(e.stack));
+
 mongodb.initDb((err, mongodb) => {
   if (err) {
     console.log(err);

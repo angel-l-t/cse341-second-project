@@ -3,7 +3,7 @@ const routesControllers = require("../controllers/games");
 const {
   gameValidationRules,
   validate,
-} = require("../middleware/games-validator");
+} = require("../middleware/validation-rules");
 const { isAuthenticated } = require("../middleware/authenticate");
 
 //This two are to get all games info or one game's info using id
