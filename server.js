@@ -9,6 +9,7 @@ const GitHubStrategy = require("passport-github2").Strategy;
 // Modules in my project
 const mongodb = require("./db/connect");
 const routes = require("./routes");
+const usersControllers = require("./controllers/users");
 
 // Creating express app
 const app = express();
@@ -42,9 +43,7 @@ passport.use(
       callbackURL: process.env.CALLBACK_URL,
     },
     function (accessToken, refreshToken, profile, done) {
-      //User.findOrCreate({ githubId: profile.id }, function (err, user) {
       return done(null, profile);
-      //});
     }
   )
 );
@@ -70,10 +69,7 @@ app.get(
     failureRedirect: "/api-docs",
     session: false,
   }),
-  (req, res) => {
-    req.session.user = req.user;
-    res.redirect("/");
-  }
+  usersControllers.createUser
 );
 
 // Catching exceptions

@@ -3,6 +3,7 @@ const passport = require("passport");
 
 // Using routes in contacts.js
 routes.use("/games", require("./games"));
+routes.use("/my-account", require("./user"));
 routes.use("/", require("./swagger"));
 
 // Login using github

@@ -1,6 +1,6 @@
 const { body, validationResult } = require("express-validator");
 
-// Validation Rules
+// Validation Rules for games
 const gameValidationRules = () => {
   return [
     // username must be an email
