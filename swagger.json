@@ -5,10 +5,10 @@
     "description": "And API to manage games info, and played checklist",
     "version": "1.0.0"
   },
-  "host": "localhost:3000",
+  "host": "cse341-alt-second-project.onrender.com",
   "basePath": "/",
   "schemes": [
-    "http"
+    "https"
   ],
   "paths": {
     "/login": {
